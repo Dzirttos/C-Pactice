@@ -181,7 +181,33 @@
 // }
 // Console.WriteLine(mes);
 
-//8. Выводится название страны и её столицы по первой введенной букве: 
-// б - Беларусь, Минск, р - Россия, Москва, л -Литва, Вильнюс (switch)
-
+//9. по введенному номеру выводится название дня недели и сообщение "рабочий день" или выходной"
 // Console.Clear();
+// string mes;
+// Console.WriteLine("Введите порядковый номер дня недели");
+// string letter = Console.ReadLine();
+// int L = Convert.ToInt32(letter);
+
+// switch (letter)
+// {
+//     case "1": mes = "Понедельник"; break;
+//     case "2": mes = "Вторинк"; break;
+//     case "3": mes = "Среда"; break;
+//     case "4": mes = "Четверг"; break;
+//     case "5": mes = "Пятница"; break;
+//     case "6": mes = "Суббота"; break;
+//     case "7": mes = "Воскресенье"; break;
+//     default: mes = "Некорректный ввод"; break;
+// }
+// Console.WriteLine(mes);
+// if (L < 6)
+// {
+//     Console.WriteLine("Рабочий день");
+// }
+// else
+// {
+//     Console.WriteLine("Выходной");
+// }
+
+//9. по введенному номеру выводится название дня недели и сообщение "рабочий день" или выходной"
+Console.Clear();
