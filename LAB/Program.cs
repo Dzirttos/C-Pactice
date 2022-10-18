@@ -209,5 +209,29 @@
 //     Console.WriteLine("Выходной");
 // }
 
-//9. по введенному номеру выводится название дня недели и сообщение "рабочий день" или выходной"
+//10. Проверяет правильность введенного логина строго из 5 букв и пароля из 6  и более цифр
 Console.Clear();
+Console.WriteLine("Введите логин:");
+string log = Console.ReadLine();
+int l = log.Length;
+if (l < 5)
+{
+    Console.WriteLine("Логин слишком короткий!");
+}
+else if (l > 5)
+{
+    Console.WriteLine("Логин слишком длинный!");
+}
+else 
+   { Console.WriteLine("Введите пароль состоящий из цифр:");
+    string pass = Console.ReadLine();
+    int p = pass.Length;
+    if (p < 6)
+    {
+    Console.WriteLine("Пароль слишком короткий!");
+    }
+    else 
+    {
+    Console.WriteLine("Пароль и логин приняты!");
+    }
+   }
