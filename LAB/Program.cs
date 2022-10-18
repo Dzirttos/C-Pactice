@@ -99,4 +99,52 @@
 //  Console.WriteLine("Нужно похудеть");
 
 //6. Введенная цифра (от 0 до 5) выводится прописью (оператор switch)
+// Console.Clear();
+
+// string mes;
+// Console.WriteLine("Введите число от 0 до 5: ");
+// string number = Console.ReadLine();
+// int number = Convert.ToInt32(Console.ReadLine()); // для альтернативного способа
+
+// switch (number)
+// {
+//     case "0" : mes = "Zero"; break; 
+//     case "1" : mes = "One"; break;
+//     case "2" : mes = "Two"; break;
+//     case "3" : mes = "Three"; break;
+//     case "4" : mes = "Four"; break;
+//     case "5" : mes = "Five"; break;
+//     default: mes = "Некорректное число"; break;
+// }
+// Console.WriteLine(mes);
+// Console.ReadKey();
+
+// Альтернативный способ
+// switch (number)
+// {
+//     case 0: 
+//     Console.WriteLine("Zero");
+//     break;
+//     case 1: 
+//     Console.WriteLine("One");
+//     break;
+//     case 2: 
+//     Console.WriteLine("Two");
+//     break;
+//     case 3: 
+//     Console.WriteLine("Three");
+//     break;
+//     case 4: 
+//     Console.WriteLine("Four");
+//     break;
+//     case 5: 
+//     Console.WriteLine("Five");
+//     break;
+//     default:
+//     Console.WriteLine("Введено некорректное число. Число должно быть от 0 до 5");
+//     break;
+// }
+
+//6. Введенная цифра (от 0 до 5) выводится прописью (оператор switch)
+
 Console.Clear();
