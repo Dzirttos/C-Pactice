@@ -210,28 +210,138 @@
 // }
 
 //10. Проверяет правильность введенного логина строго из 5 букв и пароля из 6  и более цифр
+// Console.Clear();
+// Console.WriteLine("Введите логин:");
+// string log = Console.ReadLine();
+// int l = log.Length;
+// if (l < 5)
+// {
+//     Console.WriteLine("Логин слишком короткий!");
+// }
+// else if (l > 5)
+// {
+//     Console.WriteLine("Логин слишком длинный!");
+// }
+// else 
+//    { Console.WriteLine("Введите пароль состоящий из цифр:");
+//     string pass = Console.ReadLine();
+//     int p = pass.Length;
+//     if (p < 6)
+//     {
+//     Console.WriteLine("Пароль слишком короткий!");
+//     }
+//     else 
+//     {
+//     Console.WriteLine("Пароль и логин приняты!");
+//     }
+//    }
+
+// Алгоритмическая конструкция цикл
+//1. Вычисляется сумма всех нечетных натуральных чисел от n1 до n2 (n1 n2 вводятся с клавиатуры, цикл for)
+// Console.Clear();
+// Console.WriteLine("Введите первое число:");
+// int n1 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите второе число:");
+// int n2 = Convert.ToInt32(Console.ReadLine());
+// int sum = 0;
+
+// if (n1<n2)
+// {
+
+
+//     for (int n=n1; n<n2; n++)
+//     {
+//         if (n%2 != 0)
+//         {
+//             sum += n;    
+//         }
+
+//     }
+// }
+// else if (n2<n1)
+// {
+
+
+//     for (int n=n2; n<n1; n++)
+//     {
+//         if (n%2 != 0)
+//         {
+//             sum += n;    
+//         }
+
+//     }
+// }
+// else
+// {
+// Console.WriteLine("Введно некорректное число");
+// }
+// Console.WriteLine($"Сумма всех нечетных натуральных чисел равна {sum}");
+
+//2. Вычисляется сумма квадратов n натуральных чисел, начиная с k (n и k вводятся на клавиатуре, цикл for)
+// Console.Clear();
+// Console.WriteLine("Введите начальное число:");
+// int k = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите количество чисел:");
+// int n = Convert.ToInt32(Console.ReadLine());
+// int pro = 0;
+// int p = k + n - 1;
+// for (int i = k; i <= p; i++)
+// {
+//     pro += i*i;
+// }
+// Console.WriteLine($"Сумма квадратов всех натуральных чисел начиная с {k} равна {pro}");
+
+//3. Вычисляется и выводится в таблицус шагом 10 км стоимость поездки на атомобиле в зависимости от расстояния S (10 - 90 км). С клавиатуры вводятся:
+// b - расход бензина на 100 км, p - цена бензина за 1 л. (цикл for)
+// Console.Clear();
+// Console.WriteLine("Введите расход бензина:");
+// double b = Convert.ToInt64(Console.ReadLine());
+// Console.WriteLine("Введите цену бензина за 1 л:");
+// double p = Convert.ToInt64(Console.ReadLine());
+// double sum = 0;
+
+// Console.WriteLine("Километраж:      Стоимость поездки: ");
+
+// for (double S = 10; S < 91; S += 10)
+// {
+//     sum += (S/100*b*p);
+//     Console.WriteLine($"   {S}                {sum} ");
+// }
+
+//4. В интервале [0,2] с шагом 0,1 вычисляются координаты y = V0*t-g*t*t/2 и скорости мячика V = V0 - g*t, брошенного вверх с начальной скоростью V0.
+// (V0 вводится с клавиатуры, цикл for)
+// Console.Clear();
+// Console.WriteLine("Введите начальную скорость мячика: ");
+// double V0 = Convert.ToDouble(Console.ReadLine());
+// double V = 0;
+// double t = 0;
+// double g = 9.81;
+
+// Console.WriteLine("Координаты:      Скорость мячика: ");
+
+// for (double y =0 ; y <=2 ; t += 0.1)
+// {
+//     y = y + (V0*t - g*t*t/2);
+//     V = V0 - g*t;
+//     Console.WriteLine($"{Math.Round(y, 2)}         {Math.Abs(V),2} ");  
+// }
+
+//5. Повторяются вычисления и вывод площади круга по вводимому радиусу r до тех пор, пока не будет введена буква z или Z (A = pi*r*r)
 Console.Clear();
-Console.WriteLine("Введите логин:");
-string log = Console.ReadLine();
-int l = log.Length;
-if (l < 5)
+double n = 0;
+double A = 0;
+double pi = 3.14;
+string r;
+
+while (true)
 {
-    Console.WriteLine("Логин слишком короткий!");
-}
-else if (l > 5)
-{
-    Console.WriteLine("Логин слишком длинный!");
-}
-else 
-   { Console.WriteLine("Введите пароль состоящий из цифр:");
-    string pass = Console.ReadLine();
-    int p = pass.Length;
-    if (p < 6)
+    Console.WriteLine("Введите значение радиуса: ");
+    r = Console.ReadLine();
+    if (r == "z" || r == "Z") break;
+    // if (double.TryParse(r,out n))
+    n = Convert.ToDouble(r);
     {
-    Console.WriteLine("Пароль слишком короткий!");
+    A = n * n * pi;    
+    Console.WriteLine($"Площадь круга равна: {A} ");
     }
-    else 
-    {
-    Console.WriteLine("Пароль и логин приняты!");
-    }
-   }
+}
