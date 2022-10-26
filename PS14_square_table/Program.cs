@@ -5,7 +5,7 @@ Console.Clear();
 
 void Square(int N)
 {
-    int result = 0;
+    
     int i = 1;
     while (i <= N)
     {
