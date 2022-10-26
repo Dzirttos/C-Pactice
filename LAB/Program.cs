@@ -327,21 +327,74 @@
 // }
 
 //5. Повторяются вычисления и вывод площади круга по вводимому радиусу r до тех пор, пока не будет введена буква z или Z (A = pi*r*r)
-Console.Clear();
-double n = 0;
-double A = 0;
-double pi = 3.14;
-string r;
+// Console.Clear();
+// double n = 0;
+// double A = 0;
+// double pi = 3.14;
+// string r;
 
-while (true)
+// while (true)
+// {
+//     Console.WriteLine("Введите значение радиуса: ");
+//     r = Console.ReadLine();
+//     if (r == "z" || r == "Z") break;
+//     // if (double.TryParse(r,out n))
+//     n = Convert.ToDouble(r);
+//     {
+//     A = n * n * pi;    
+//     Console.WriteLine($"Площадь круга равна: {A} ");
+//     }
+// }
+
+// 6. Генерируются 8 случайных чисел в интервале (-30, 30). Выводятся эти числа и сообщения: отрицательное - положительное, четное -нечетное 
+// Console.Clear();
+
+// string mesNeg = "отрицательное";
+// string mesZero = "Это же ноль!";
+// string mesPos = "положительное";
+// string mesEven = "четное";
+// string mesOdd = "нечетное";
+// string mesZero2 = "Скажано же, это ноль!";
+
+// for (int i = 0; i < 9; i++)
+// {
+//     int number = new Random().Next(-1, 2);
+//     string mes1 = "", mes2 = "";
+//     if (number < 0) mes1 = mesNeg;
+//     else if (number > 0) mes1 = mesPos;
+//     else if (number == 0) mes1 = mesZero;
+
+//     if (number % 2 == 0) mes2 = mesEven;
+//     else if (number % 2 != 0) mes2 = mesOdd;
+//     else if (number  == 0) mes2 = mesZero2;
+    
+
+//     Console.WriteLine($" {number}. {mes1} {mes2} ");
+// }
+
+// 7. Генерируются 10 случайных чисел в интервале (-20, 20). Выводятся только положительные числа и сообщение: четное -нечетное 
+Console.Clear();
+
+string mesEven = "четное";
+string mesOdd = "нечетное";
+
+for (int i = 0; i < 11; i++)
 {
-    Console.WriteLine("Введите значение радиуса: ");
-    r = Console.ReadLine();
-    if (r == "z" || r == "Z") break;
-    // if (double.TryParse(r,out n))
-    n = Convert.ToDouble(r);
+    int number = new Random().Next(-20, 21);
+    string mes2 = "";
+    if (number > 0) 
     {
-    A = n * n * pi;    
-    Console.WriteLine($"Площадь круга равна: {A} ");
+        if (number % 2 == 0) 
+        {
+        mes2 = mesEven;
+        Console.WriteLine($" {number}. {mes2} ");
+        }
+        else if (number % 2 != 0)
+        {
+        mes2 = mesOdd;
+        Console.WriteLine($" {number}. {mes2} ");
+        }
     }
+
+    
 }
