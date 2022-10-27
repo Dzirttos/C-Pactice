@@ -367,34 +367,109 @@
 //     if (number % 2 == 0) mes2 = mesEven;
 //     else if (number % 2 != 0) mes2 = mesOdd;
 //     else if (number  == 0) mes2 = mesZero2;
-    
+
 
 //     Console.WriteLine($" {number}. {mes1} {mes2} ");
 // }
 
 // 7. Генерируются 10 случайных чисел в интервале (-20, 20). Выводятся только положительные числа и сообщение: четное -нечетное 
-Console.Clear();
+// Console.Clear();
 
-string mesEven = "четное";
-string mesOdd = "нечетное";
+// string mesEven = "четное";
+// string mesOdd = "нечетное";
 
-for (int i = 0; i < 11; i++)
-{
-    int number = new Random().Next(-20, 21);
-    string mes2 = "";
-    if (number > 0) 
-    {
-        if (number % 2 == 0) 
-        {
-        mes2 = mesEven;
-        Console.WriteLine($" {number}. {mes2} ");
-        }
-        else if (number % 2 != 0)
-        {
-        mes2 = mesOdd;
-        Console.WriteLine($" {number}. {mes2} ");
-        }
-    }
+// for (int i = 0; i < 11; i++)
+// {
+//     int number = new Random().Next(-20, 21);
+//     string mes2 = "";
+//     if (number > 0) 
+//     {
+//         if (number % 2 == 0) 
+//         {
+//         mes2 = mesEven;
+//         Console.WriteLine($" {number}. {mes2} ");
+//         }
+//         else if (number % 2 != 0)
+//         {
+//         mes2 = mesOdd;
+//         Console.WriteLine($" {number}. {mes2} ");
+//         }
+//     }
 
-    
-}
+
+// }
+
+// 8. Генерируются случайные числа в интервале (-40, 40). Пока очередное число не превышает 30. Выводятся только нечетные числа и сообщения: отрицательное - положительное 
+// Console.Clear();
+
+// string mesNeg = "отрицательное";
+// string mesPos = "положительное";
+
+// int i = 0;
+// int number = 0;
+// while (number <= 30)
+// {
+//     number = new Random().Next(-40, 41);
+//     if (number > 30) 
+//     {
+//         Console.WriteLine($"Сгенерированное число {number} больше 30. Цикл завершен.");
+//         break;
+//     }
+//     if (number < 0)
+//     {
+//         string mes1 = mesNeg;
+//         Console.WriteLine($" {number}. {mes1}");
+//     }
+//     else if (number > 0)
+//     {
+//         string mes1 = mesPos;
+//         Console.WriteLine($" {number}. {mes1}");
+//     }
+//     else
+//     {
+//         Console.ForegroundColor = ConsoleColor.Red;
+//         Console.WriteLine($"{number}. Сгенерировался ноль");
+//         Console.ResetColor();
+//     }
+//     i++;
+// }
+
+
+// 9. Генерируются случайные числа в интервале (0, 20). Пока их сумма не превысит S - вводится с клавиатуры. Нумеруются и ввыодятся эти числа и их сумма.
+// Console.Clear();
+
+// Console.WriteLine("Введите предельную сумму генерируемых чисел:");
+// int S = Convert.ToInt32(Console.ReadLine());
+
+// int i = 0;
+// int number = 0;
+// int newSum = 0;
+// while (newSum < S)
+// {
+//     number = new Random().Next(0, 21);
+//     newSum += number;
+//     Console.WriteLine($"{i+1}. {number}");
+//    i++;
+// }
+// Console.WriteLine($"Сумма всех чисел равна {newSum} и больше {S}.");
+
+
+
+// 10. Ежедневно количество бактерий увеличивается на p процентов. Через сколько дней количество бактерий увеличится в n раз. (p и n вводятся с клавиатуры)
+// Console.Clear();
+
+// Console.WriteLine("На сколько процентов увеличивается количество бактерий?");
+// double p = Convert.ToDouble(Console.ReadLine());
+// Console.WriteLine("Введите во сколько раз увеличилось количество бактерий?");
+// double n = Convert.ToDouble(Console.ReadLine());
+
+// double B0 = 1;
+// double B1 = B0;
+// int day = 0;
+
+// while (B1/B0 <= n)
+// {
+//     B1 = B1 * (1+p/100);
+//     day++;
+// }
+// Console.WriteLine($"Количество бактерий увеличится в {n} раз через {day} дней.");
