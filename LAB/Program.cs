@@ -291,13 +291,13 @@
 // }
 // Console.WriteLine($"Сумма квадратов всех натуральных чисел начиная с {k} равна {pro}");
 
-//3. Вычисляется и выводится в таблицус шагом 10 км стоимость поездки на атомобиле в зависимости от расстояния S (10 - 90 км). С клавиатуры вводятся:
+// 3. Вычисляется и выводится в таблицус шагом 10 км стоимость поездки на атомобиле в зависимости от расстояния S (10 - 90 км). С клавиатуры вводятся:
 // b - расход бензина на 100 км, p - цена бензина за 1 л. (цикл for)
 // Console.Clear();
 // Console.WriteLine("Введите расход бензина:");
-// double b = Convert.ToInt64(Console.ReadLine());
+// double b = Convert.ToDouble(Console.ReadLine());
 // Console.WriteLine("Введите цену бензина за 1 л:");
-// double p = Convert.ToInt64(Console.ReadLine());
+// double p = Convert.ToDouble(Console.ReadLine());
 // double sum = 0;
 
 // Console.WriteLine("Километраж:      Стоимость поездки: ");
@@ -305,7 +305,7 @@
 // for (double S = 10; S < 91; S += 10)
 // {
 //     sum += (S/100*b*p);
-//     Console.WriteLine($"   {S}                {sum} ");
+//     Console.WriteLine($"   {S}                {Math.Round(sum,2)} ");
 // }
 
 //4. В интервале [0,2] с шагом 0,1 вычисляются координаты y = V0*t-g*t*t/2 и скорости мячика V = V0 - g*t, брошенного вверх с начальной скоростью V0.
