@@ -473,3 +473,18 @@
 //     day++;
 // }
 // Console.WriteLine($"Количество бактерий увеличится в {n} раз через {day} дней.");
+
+
+
+// За каждый месяц банк начисляет к сумме вклада 7% от суммы. Напишите консольную программу, в которую пользователь вводит сумму вклада и количество месяцев. 
+// А банк вычисляет конечную сумму вклада с учетом начисления процентов за каждый месяц.
+// Console.Clear();
+
+// Console.WriteLine("Начальная сумма вклада");
+// double s = Convert.ToDouble(Console.ReadLine());
+// Console.WriteLine("количество месяцев");
+// double m = Convert.ToDouble(Console.ReadLine());
+// double sum = 0;
+
+// sum = s * Math.Pow((1+0.07/12),m);
+// Console.WriteLine(Math.Round(sum,2));
