@@ -23,4 +23,17 @@ public class func
         Console.WriteLine();
     }
 
+
+// формируем массив из введенных чисел через пробел
+
+public static int[] GetArrayFromString (string stringArray)
+    {
+        string [] nums = stringArray.Split(" ", StringSplitOptions.RemoveEmptyEntries);
+        int [] res = new int [nums.Length];
+        for (int i = 0; i < nums.Length; i++)
+        {
+            res[i] = Convert.ToInt32(nums[i]);
+        }
+        return res;
+    }
 }
